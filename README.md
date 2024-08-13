@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
+## Setup
+
+### Clone the Repository
+
+-First, clone the repository to your local machine
+- Navigate to project folder and perform npm install
+-I am using the json server to perform CRUD
+-Start the json server using command `npm run start:json-server`
+-Build and serve the angular application using `ng serve`
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
