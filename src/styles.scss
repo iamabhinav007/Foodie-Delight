@@ -1,0 +1,45 @@
+/* Global styles for the application */
+body {
+    background-color: #e0f7fa; /* Light blue background for the entire application */
+    color: #333; /* Default text color */
+    font-family: Arial, sans-serif; /* Consistent font */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Main content area */
+  .main-content {
+    background-color: #ffffff; /* White background for main content areas */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #4fc3f7; /* Light blue background */
+    color: white; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #03a9f4; /* Slightly darker blue on hover */
+  }
+  
+  /* Input Fields */
+  input, textarea {
+    border: 1px solid #b3e5fc; /* Light blue border */
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #4fc3f7; /* Light blue border on focus */
+    outline: none;
+  }
+  

@@ -1,0 +1,15 @@
+<div class="restaurant-detail">
+    <div *ngIf="isLoading" class="loading-indicator">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+    </div>
+    <div *ngIf="restaurant" class="restaurant-info">
+      <h2 class="restaurant-name">{{ restaurant.name }}</h2>
+      <p class="restaurant-description">{{ restaurant.description }}</p>
+      <p class="restaurant-location">{{ restaurant.location }}</p>
+    </div>
+  </div>
+  

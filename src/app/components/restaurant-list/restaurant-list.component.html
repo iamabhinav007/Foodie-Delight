@@ -1,0 +1,50 @@
+<div class="restaurant-list">
+    <div *ngIf="isLoading" class="loading-indicator">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+    <div *ngIf="error" class="error-message">
+      <p>{{ error }}</p>
+    </div>
+    <div class="table-container">
+    <table *ngIf="!isLoading && !error" class="restaurant-table">
+        @if(restaurants.length)
+        {
+        <button (click)="addRestaurant()" class="add-restaurant-button">Add Restaurant</button>
+        }
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(value of restaurants; track $index){
+        <tr  (click)="toggleDetail($index)" class="restaurant-row">
+          <td>{{ value.name }}</td>
+          <td>
+            <button (click)="viewRestaurant(value.id)" class="action-button view-button">View</button>
+            <button (click)="deleteRestaurant(value.id, $event)" class="action-button delete-button">Delete</button>
+          </td>
+        </tr>
+    
+    @if(expandedRestaurantId === value.id)
+    {
+        <tr>
+            <td colspan="2" class="restaurant-details">
+              <p><strong>Description:</strong> {{ value.description }}</p>
+              <p><strong>Location:</strong> {{ value.location }}</p>
+            </td>
+          </tr>
+    }
+}
+@empty{
+    <p>No restaurants available.</p>
+    <button (click)="addRestaurant()">Add Restaurant</button>
+}
+        
+      </tbody>
+    </table>
+    </div>
+  </div>
+  

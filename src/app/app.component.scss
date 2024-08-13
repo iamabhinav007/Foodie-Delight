@@ -1,0 +1,46 @@
+/* Navigation bar styling */
+.navbar {
+    background-color: #0288d1; /* Light blue background */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5em;
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-menu a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .navbar-menu a:hover,
+  .navbar-menu a.active {
+    cursor: pointer;
+    background-color: #03a9f4; /* Slightly darker blue for hover/active state */
+    color: #ffffff; /* White text color */
+  }
+  
+  .app-content {
+    padding: 20px;
+    background-color: #e0f7fa; /* Light blue background for main content */
+  }
+  

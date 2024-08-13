@@ -1,0 +1,30 @@
+<!-- Form HTML -->
+<form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()" class="restaurant-form">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" formControlName="name" placeholder="Enter restaurant name">
+      <div *ngIf="restaurantForm.get('name')?.invalid && (restaurantForm.get('name')?.dirty || restaurantForm.get('name')?.touched)" class="error-message">
+        <div *ngIf="restaurantForm.get('name')?.errors?.['required']">Name is required</div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea id="description" formControlName="description" placeholder="Enter restaurant description"></textarea>
+      <div *ngIf="restaurantForm.get('description')?.invalid && (restaurantForm.get('description')?.dirty || restaurantForm.get('description')?.touched)" class="error-message">
+        <div *ngIf="restaurantForm.get('description')?.errors?.['required']">Description is required</div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="location">Location</label>
+      <input type="text" id="location" formControlName="location" placeholder="Enter restaurant location">
+      <div *ngIf="restaurantForm.get('location')?.invalid && (restaurantForm.get('location')?.dirty || restaurantForm.get('location')?.touched)" class="error-message">
+        <div *ngIf="restaurantForm.get('location')?.errors?.['required']">Location is required</div>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="restaurantForm.invalid" class="submit-button">Submit</button>
+    <button type="submit" class="submit-button cancel-button" (click)="navigateToHome()">Cancel</button>
+  </form>
+  
